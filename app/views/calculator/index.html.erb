@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Kalkulator</title>
+  </head>
+  <body>
+    <form name="calculator"> 
+    <div class="form mb-3">
+    <h1 class="kal">Kalkulator</h1>
+            <label for="formGroupExampleInput" class="form-label">Masukan Angka Pertama</label>
+            <input type="number" class="form-control" name="angka1" ">
+        <div class="mb-3">
+            <label for="formGroupExampleInput2" class="form-label">Masukan Angka Kedua</label>
+            <input type="number" class="form-control" name="angka2" ">
+        </div>
+        <div class="mb-3">
+            <label for="formGroupExampleInput" class="form-label text-center hasil">Hasil</label>
+            <input type="number" class="form-control" name="hasil"disabled>
+        </div>
+        <button  type="button" class="btn btn-primary" onclick="tambah()" value="+">( + )</button>
+        <button  type="button" class="btn btn-secondary" onclick="kurang()" value="-">( - )</button>  
+        <button  type="button" class="btn btn-success" onclick="kali()" value="*">( X )</button>
+        <button  type="button" class="btn btn-danger" onclick="bagi()" value="/">( : )</button> 
+        </div>
+  </body>
+</html>
+
+<script>
+function tambah(){
+    var angka1=parseFloat(document.calculator.angka1.value);
+    var angka2=parseFloat(document.calculator.angka2.value);
+    var hasil= angka1+angka2;
+    document.calculator.hasil.value=hasil;
+   }
+   function kurang(){
+    var angka1=parseFloat(document.calculator.angka1.value);
+    var angka2=parseFloat(document.calculator.angka2.value);
+    var hasil= angka1-angka2;
+    document.calculator.hasil.value=hasil;
+   }
+   function kali(){
+    var angka1=parseFloat(document.calculator.angka1.value);
+    var angka2=parseFloat(document.calculator.angka2.value);
+    var hasil= angka1*angka2;
+    document.calculator.hasil.value=hasil;
+   }
+   function bagi(){
+    var angka1=parseFloat(document.calculator.angka1.value);
+    var angka2=parseFloat(document.calculator.angka2.value);
+    var hasil= angka1/angka2;
+    document.calculator.hasil.value=hasil;
+   } 
+
+</script>
+
+
+
+
+
